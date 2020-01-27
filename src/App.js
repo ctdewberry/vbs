@@ -50,7 +50,7 @@ class Homepage extends Component {
     transfer2 = 0;
     transfer3 = 0;
     transfer4 = 0;
-    transfer5 =00;
+    transfer5 = 0;
 
     //setup initial values for graph
     newData = [{name: 'Call 1', uv: 0},
