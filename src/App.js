@@ -46,18 +46,18 @@ class Homepage extends Component {
     }
 
     //more setting up of initial variables
-    transfer1 = 100;
-    transfer2 = 100;
-    transfer3 = 100;
-    transfer4 = 100;
-    transfer5 = 100;
+    transfer1 = 0;
+    transfer2 = 0;
+    transfer3 = 0;
+    transfer4 = 0;
+    transfer5 =00;
 
     //setup initial values for graph
-    newData = [{name: 'Call 1', uv: 100},
-        {name: '2', uv: 100},
-        {name: '3', uv: 100 },
-        {name: '4', uv: 100 },
-        {name: '5', uv: 100 }
+    newData = [{name: 'Call 1', uv: 0},
+        {name: '2', uv: 0},
+        {name: '3', uv: 0 },
+        {name: '4', uv: 0 },
+        {name: '5', uv: 0 }
     ]
 
     //setup initial graph
@@ -143,10 +143,10 @@ class Homepage extends Component {
     callData(event) {
         this.calculateTotalForCall()
         if (this.callCounter === 1) {
-            this.transfer2 = 100;
-            this.transfer3 = 100;
-            this.transfer4 = 100;
-            this.transfer5 = 100;
+            this.transfer2 = 0;
+            this.transfer3 = 0;
+            this.transfer4 = 0;
+            this.transfer5 = 0;
             this.transfer1 = (this.call / 18)*100;
             this.newData = [{name: 'Call 1', uv: this.transfer1},
                 {name: '2', uv: this.transfer2},
@@ -248,11 +248,11 @@ class Homepage extends Component {
     //resets all data
     resetCalls(event) {
         this.callCounter = 1;
-        this.newData = [{name: 'Call 1', uv: 100},
-            {name: '2', uv: 100},
-            {name: '3', uv: 100 },
-            {name: '4', uv: 100 },
-            {name: '5', uv: 100 }
+        this.newData = [{name: 'Call 1', uv: 0},
+            {name: '2', uv: 0},
+            {name: '3', uv: 0 },
+            {name: '4', uv: 0 },
+            {name: '5', uv: 0 }
         ]
         this.renderLineChart = (
             <LineChart width={300} height={200} data={this.newData}>
@@ -262,11 +262,11 @@ class Homepage extends Component {
                 <YAxis />
             </LineChart>
         );
-        this.transfer1 = 100;
-        this.transfer2 = 100;
-        this.transfer3 = 100;
-        this.transfer4 = 100;
-        this.transfer5 = 100;
+        this.transfer1 = 0;
+        this.transfer2 = 0;
+        this.transfer3 = 0;
+        this.transfer4 = 0;
+        this.transfer5 = 0;
         this.forceUpdateHandler();
         this.call = 0;
 
